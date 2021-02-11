@@ -1,0 +1,25 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<body class="bg-info" >
+<hr>
+<h1 class="text-center text-dark">ToDo List</h1>
+<hr>
+
+<div class="container d-flex justify-content-center">
+    <div class="card text-white bg-danger" style="max-width: 25rem;">
+        <div class="card-header text-dark text-center"><strong>Are you sure ?</strong></div>
+        <div class="card-body">
+            <h5>Are you sure you want to delete this "{{item}}" ? </h5>
+
+            <a class="btn btn-sm btn-info" href="{% url 'list' %}" >Cancel</a>
+            
+            <form  method="POST" action="">
+                <br>
+                {% csrf_token %}
+                <input class="btn btn-sm btn-warning" type="submit" name="Confirm">
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+

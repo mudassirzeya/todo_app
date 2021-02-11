@@ -1,0 +1,27 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<body class="bg-info" >
+<hr>
+<h1 class="text-center text-dark">ToDo List</h1>
+<hr>
+
+<div class="container d-flex justify-content-center">
+    <div ALIGN='center' class=" card text-white bg-success mb-3" style="max-width: 25rem;">
+        <div class="card-header text-center text-dark"><strong>Update your list item.</strong></div>
+        <div class="card-body">
+            <form method="POST" action="">
+            
+                <div>
+                {% csrf_token %}
+            
+                {{form}}
+
+                <br>
+                <input class="btn btn-sm btn-info" type="submit" name="Update Task">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+
